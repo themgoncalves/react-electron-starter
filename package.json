@@ -12,12 +12,13 @@
     "build": "webpack --config webpack.config.production.js --progress --profile --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "dev": " webpack-dashboard -- webpack",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "react",
     "webpack",
-    "3",
     "sass"
   ],
   "author": "Marcos Gonçalves",
@@ -52,14 +53,16 @@
     "css-loader": "^0.28.7",
     "electron": "^1.7.8",
     "electron-reload": "^1.2.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
     "eslint": "^4.6.1",
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "html-webpack-include-assets-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^21.0.1",
-    "jsdom": "^11.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
     "loglevel": "^1.4.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
@@ -72,5 +75,33 @@
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-dashboard": "^1.0.0-5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest-setup-env.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(scss|less|css)$": "identity-obj-proxy",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.js",
+      "expose-loader.*$": "<rootDir>/__mocks__/expose-loader.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/app/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!src/app/lib/**",
+      "!src/scss/**",
+      "!**/coverage/**"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary",
+      "html"
+    ]
   }
 }

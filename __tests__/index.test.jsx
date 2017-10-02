@@ -1,9 +1,10 @@
-import 'babel-polyfill';
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import App from 'app';
 
-describe('App', () => {
+describe('<App />', () => {
     it('renders without crashing', () => {
-        mount(<App />);
+        shallow(<App />);
     });
 });
