@@ -1,4 +1,4 @@
-# React 16 beta-5, Electron & Redux Starter Pack [![Dependency Status](https://gemnasium.com/badges/github.com/themgoncalves/react-electron-starter.svg)](https://gemnasium.com/github.com/themgoncalves/react-electron-starter)
+# React 16, Electron & Redux Starter Pack [![Dependency Status](https://gemnasium.com/badges/github.com/themgoncalves/react-electron-starter.svg)](https://gemnasium.com/github.com/themgoncalves/react-electron-starter)
 
 
 ### Documentations
