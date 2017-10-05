@@ -9,7 +9,7 @@
 
 Just clone or download it and start coding. No  more project initial set-up needed.
 
-### Main Features
+## Main Features
 
 * [React 16](https://facebook.github.io/react/)
 * [Redux](http://redux.js.org/)
@@ -25,7 +25,7 @@ Just clone or download it and start coding. No  more project initial set-up need
 * [ESLint with Airbnb ECMAScript 6+ and React rules](https://www.npmjs.com/package/eslint-config-airbnb)
 * [SCSS](http://sass-lang.com)
 
-### Documentations
+# Documentations
 
 * [React](https://facebook.github.io/react/)
 * [About React 16 beta-5](https://facebook.github.io/react/blog/)
@@ -38,7 +38,7 @@ Just clone or download it and start coding. No  more project initial set-up need
 
 There is two methods to get started with the repo.
 
-#### Familiar with Git?
+### Familiar with Git?
 
 Just clone the repo with the following commands:
 ```
@@ -46,7 +46,7 @@ Just clone the repo with the following commands:
 > cd react-electron-starter
 ```
 
-#### Not familiar Git?
+### Not familiar Git?
 
 That is ok, just [Click here](https://github.com/themgoncalves/react-electron-starter/archive/master.zip) to download this repo in zip file and then extract the file in your favorite location.
 
@@ -72,7 +72,7 @@ npm start
 npm run start:dev
 ```
 
-### Running tests
+## Running tests
 
 ```js
 npm test
