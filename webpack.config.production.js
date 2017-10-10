@@ -50,6 +50,7 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default'],
         }),
         new webpack.optimize.UglifyJsPlugin({
             mangle: true,
